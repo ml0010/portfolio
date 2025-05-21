@@ -1,0 +1,9 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #A6C1DD;
+    text-align: center;
+    font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif;
+    color: #14404A;
+}
