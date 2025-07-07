@@ -1,9 +1,105 @@
-html {
-    scroll-behavior: smooth;
+.home {
+    position: relative;
+    min-height: 100vh;
+    color: var(--dark);
 }
-body {
-    background: #A6C1DD;
-    text-align: center;
-    font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif;
-    color: #14404A;
+.home .name {
+    position: absolute;
+    left: -500px;
+    top: 0%;
+    font-size: 120px;
+    letter-spacing: 0.4rem;
+    font-weight: 800;
+
+}
+.home .name.loading {
+    transition: 1s;
+    transition-delay: 0.3s;
+    left: 15vw;
+}
+
+.home .name .highlighter {
+    position:relative;
+    z-index: 10;
+}
+
+.home .name .highlighter:before {
+    content: '';
+    background-color: var(--neon);
+    width: 0%;
+    height: 1em;
+    position: absolute;
+    z-index: -1;
+    left: -0.4em;
+    top: 0.1em;
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-1deg);
+}
+
+.home .name .highlighter.loading:before {
+    width: 120%;
+    transition: width 0.5s;
+    transition-delay: 2s;
+}
+
+.home .description {
+    position: absolute;
+}
+
+.home .description {
+    position: absolute;
+    font-size: 25px;
+    left: 0;
+    top: 35%;
+    opacity: 0;
+}
+.home .description.loading {
+    transition: 1s;
+    transition-delay: 1s;
+    left: 15vw;
+    opacity: 1;
+}
+.home .projectBttn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--neon);
+    cursor: pointer;
+    width: 250px;
+    height: 50px;
+}
+.home .projectBttn:hover {
+
+}
+
+
+@media only screen and (max-width: 900px) {
+    .home .name {
+        font-size: 90px;
+    }
+    .home .description {
+        font-size: 25px;
+        left: 0;
+        top: 25%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .home .name {
+        font-size: 60px;
+        letter-spacing: 0.2rem;
+    }
+    .home .description {
+        font-size: 23px;
+        left: 0;
+        top: 20%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .home .name {
+        font-size: 50px;
+    }
 }
