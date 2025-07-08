@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/Home.css';
 import { useNavigate } from 'react-router-dom';
+import { MotionRoute, MotionChild } from '../components/Motions';
 
 export const Home = () => {
     
@@ -10,19 +11,24 @@ export const Home = () => {
 
     useEffect(() => {
         setLoadName(true);
-    }, []);
+    }, [loadName]);
 
     return (
-        <div className='home'>
-            <div>
-                <p className={`name ${loadName? 'loading' : ''}`}>
-                    <span className={`highlighter ${loadName? 'loading' : ''}`}>Mimi Lim</span>
-                </p>
-            </div>
-            <div className={`description ${loadName? 'loading' : ''}`}>
-                <p>Front End Developer</p>
-                <button className='projectBttn' onClick={()=>navigate('/projects')}>SEE PROJECTS</button>
-            </div>
-        </div>
+        <MotionRoute>
+            <MotionChild>
+                <div className='home'>
+                    <div>
+                        <p className={`name ${loadName? 'loading' : ''}`}>
+                            <span className={`highlighter ${loadName? 'loading' : ''}`}>Mimi Lim</span>
+                        </p>
+                    </div>
+                    <div className={`description ${loadName? 'loading' : ''}`}>
+                        <p>Front End Developer</p>
+                        <button className='projectBttn' onClick={()=>navigate('/projects')}>SEE PROJECTS</button>
+                    </div>
+                </div>
+            </MotionChild>
+        </MotionRoute>
     )
 }
+export default Home

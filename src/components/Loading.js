@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 function Loading() {
-    const [] = useState();
     return (
-        <div>Loading</div>
+        <div>Loading...</div>
     )
 }
 

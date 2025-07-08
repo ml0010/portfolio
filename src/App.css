@@ -20,7 +20,6 @@
     font-family: 'DM Sans', 'Helvetica';
     color: var(--dark);
     background-color: var(--background);
-
 }
 .contents {
     opacity: 0;
@@ -36,4 +35,5 @@
     width: 100%;
     background-image: radial-gradient(rgb(220, 221, 222) 1px, transparent 1px);
     background-size: 16px 16px;
+    background-attachment: fixed;
 }
