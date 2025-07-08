@@ -1,8 +1,7 @@
 .about {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding-top: 10vh;
 }
 .about .title h1 {
     font-size: 50px;

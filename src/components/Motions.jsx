@@ -16,7 +16,7 @@ const routeVariants = {
 
 const childVariants = {
     initial: {
-        y: "20px",
+        y: "10px",
     },
     final: {
         y: "0px",

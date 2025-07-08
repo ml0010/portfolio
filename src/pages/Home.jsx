@@ -24,6 +24,7 @@ export const Home = () => {
                     </div>
                     <div className={`description ${loadName? 'loading' : ''}`}>
                         <p>Front End Developer</p>
+                        <button className='projectBttn' onClick={()=>navigate('/projects')}>SEE PROJECTS</button>
                     </div>
                 </div>
             </MotionChild>

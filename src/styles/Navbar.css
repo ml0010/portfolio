@@ -57,7 +57,7 @@
         max-width: 95%;
         border-radius: 50px;
         border: 1px solid rgba(255, 255, 255, 0.71);
-        height: 60px;  display: flex;
+        height: 50px;  display: flex;
         top: 91%;
         left: 50%;
         transform: translate(-50%, -50%);

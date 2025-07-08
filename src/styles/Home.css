@@ -2,7 +2,6 @@
     position: relative;
     min-height: 100vh;
     color: var(--dark);
-    padding-top: 4vh;
 }
 .home .name {
     position: absolute;
