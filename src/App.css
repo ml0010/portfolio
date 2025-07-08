@@ -13,17 +13,21 @@
     --dark: rgb(46, 46, 46);
 }
  html, body {
-
-padding: 0;
-
-margin: 0;
-
+    padding: 0;
+    margin: 0;
 } 
 .App {
-
     font-family: 'DM Sans', 'Helvetica';
     color: var(--dark);
     background-color: var(--background);
+
+}
+.contents {
+    opacity: 0;
+    transition: 0.5s ease-in;
+}
+.contents.active {
+    opacity: 1;
 }
 .dot {
     position: absolute;
