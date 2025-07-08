@@ -1,12 +1,12 @@
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-
 import { LanguageContextProvider } from './context/Language-context.jsx';
 import { useEffect, useState } from 'react';
 import { AnimatePresence } from "framer-motion";
-import RoutesWithAnimation from './components/Routes.js';
+import RoutesList from './components/Routes.js';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
 
 function App() {
     const [ loadingEffect, setLoadingEffect ] = useState(false);
@@ -22,7 +22,7 @@ function App() {
             <AnimatePresence>
                 <LanguageContextProvider>
                     <Navbar />
-                    <RoutesWithAnimation />
+                    <RoutesList />
                     <Footer />
                 </LanguageContextProvider>
             </AnimatePresence>

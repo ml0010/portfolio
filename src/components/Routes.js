@@ -3,14 +3,14 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 import { Home } from '../pages/Home.jsx';
 import { HomeES } from '../pages/HomeES.jsx';
 import { HomeKR } from '../pages/HomeKR.jsx';
-import { Projects } from '../pages/Projects.jsx';
 import { About } from '../pages/About.jsx';
 import { AboutES } from '../pages/AboutES.jsx';
 import { AboutKR } from '../pages/AboutKR.jsx';
+import { Projects } from '../pages/Projects.jsx';
 import { ProjectsES } from '../pages/ProjectsES.jsx';
 import { ProjectsKR } from '../pages/ProjectsKR.jsx';
 
-function RoutesWithAnimation() {
+function RoutesList() {
     
     const location = useLocation();
 
@@ -31,4 +31,4 @@ function RoutesWithAnimation() {
     )
 }
 
-export default RoutesWithAnimation
+export default RoutesList;
