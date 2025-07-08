@@ -1,8 +1,8 @@
 import React from 'react'
 import '../styles/Projects.css'
 
-export const Projects = () => {
+export const ProjectsKR = () => {
   return (
-    <div>Projects</div>
+    <div>Projects KR</div>
   )
 }

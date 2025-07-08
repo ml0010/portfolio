@@ -14,7 +14,6 @@ export const Home = () => {
 
     return (
         <div className='home'>
-            <div className='grid'></div>
             <div>
                 <p className={`name ${loadName? 'loading' : ''}`}>
                     <span className={`highlighter ${loadName? 'loading' : ''}`}>Mimi Lim</span>

@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@font-face {
+      font-family: 'Classma'; /* Choose a name for your font */
+      src: local('Classma'), url('./fonts/Classma.otf') format('opentype');
+      /* Add other formats if available */
+      font-weight: normal; /* Specify font weight */
+      font-style: normal;  /* Specify font style */
+}
 
 :root {
     --background: rgb(241, 241, 241);

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css';
 
-export const HomeES = () => {
+
+export const HomeKR = () => {
     
     const [ loadName, setLoadName ] = useState(false);
 
@@ -20,7 +21,7 @@ export const HomeES = () => {
                 </p>
             </div>
             <div className={`description ${loadName? 'loading' : ''}`}>
-                <p>Desarrollador Front End</p>
+                <p>프론트엔드 개발자</p>
                 <button className='projectBttn' onClick={()=>navigate('/projects')}>SEE PROJECTS</button>
             </div>
         </div>

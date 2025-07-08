@@ -2,8 +2,8 @@ import React from 'react'
 import '../styles/About.css'
 
 
-export const About = () => {
+export const AboutKR = () => {
   return (
-    <div>About</div>
+    <div>About KR</div>
   )
 }

@@ -1,12 +1,46 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import '../styles/Navbar.css';
-import { Link, useNavigate } from 'react-router-dom';
-import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
-import ArrowDropUpSharpIcon from '@mui/icons-material/ArrowDropUpSharp';
-import ArrowDropDownSharpIcon from '@mui/icons-material/ArrowDropDownSharp';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { LanguageContext } from '../context/Language-context';
 
 
 function Navbar() {
+
+    const { isEnglish, isSpanish, isKorean, setEnglish, setSpaish, setKorean } = useContext(LanguageContext);
+
+    const path = useLocation().pathname.split('_')[0];
+
+    return (
+        <div className='navbar'>
+            <div className='leftSide'>
+                {isEnglish? <>
+                    <NavLink to='/home'>Home</NavLink>
+                    <NavLink to='/about'>About</NavLink>
+                    <NavLink to='/projects'>Projects</NavLink>
+                </> : <></>}
+                {isSpanish? <>
+                    <NavLink to='/home_es'>Home</NavLink>
+                    <NavLink to='/about_es'>About</NavLink>
+                    <NavLink to='/projects_es'>Proyectos</NavLink>
+                </> : <></>}
+                {isKorean? <>
+                    <NavLink to='/home_kr'>Home</NavLink>
+                    <NavLink to='/about_kr'>About</NavLink>
+                    <NavLink to='/projects_kr'>프로젝트</NavLink>
+                </> : <></>}
+            </div>
+            <div className='rightSide'>
+                <Link to={`${path}`} className={`language ${isEnglish ? 'active' : ''}`} onClick={setEnglish}>EN</Link>
+                <Link to={`${path}_es`} className={`language ${isSpanish ? 'active' : ''}`} onClick={setSpaish}>ES</Link>
+                <Link to={`${path}_kr`} className={`language ${isKorean ? 'active' : ''}`} onClick={setKorean}>KR</Link>
+            </div>
+        </div>
+    )
+}
+
+export default Navbar
+
+/*
 
   const [openLanguage, setOpenLanguage] = useState(false);
   const toggleLanguageMenu = () => {
@@ -15,15 +49,7 @@ function Navbar() {
   const isLanguageButtonOpen = () => {
     return openLanguage? <ArrowDropUpSharpIcon /> : <ArrowDropDownSharpIcon />;
   }
-  const navigate = useNavigate();
 
-  return (
-    <div className="navbar">
-        <div className="leftSide">
-            <span onClick={()=>navigate('/home')}>HOME</span>
-            <span onClick={()=>navigate('/about')}>ABOUT</span>
-            <span onClick={()=>navigate('/projects')}>PROJECTS</span>
-        </div>
         <div className="rightSide" id={openLanguage ? "open" : "close"} 
             onMouseEnter={() => setOpenLanguage(true)}
             onMouseLeave={() => setOpenLanguage(false)}>
@@ -31,13 +57,9 @@ function Navbar() {
             <LanguageOutlinedIcon /><b>LANGUAGE{isLanguageButtonOpen()}</b>
             </button>
             <div className="hiddenLinks">
-            <Link to="./home" onClick={openLanguage ? "open" : "close"}> ENGLISH </Link>
+            <Link to="/home" onClick={openLanguage ? "open" : "close"}> ENGLISH </Link>
             <br></br>
-            <Link to="./homeES" onClick={openLanguage ? "open" : "close"}> CASTELLANO </Link>
+            <Link to="/homeES" onClick={openLanguage ? "open" : "close"}> CASTELLANO </Link>
             </div>
         </div>
-    </div>
-  )
-}
-
-export default Navbar
+        */
