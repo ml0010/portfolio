@@ -4,7 +4,77 @@
     justify-content: center;
     align-items: center;
     padding-top: 10vh;
+    padding-bottom: 20vh;
 }
-.project .title h1 {
-    font-size: 50px;
+.project .title {
+    width: 90%;
+    font-size: 30px;
+}
+.project .content {
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.project .project-list {
+    width: inherit;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2em;
+    padding-bottom: 30px;
+}
+.project .project-list-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 300ms ease 100ms;
+}
+.project .project-list-item:hover {
+    transform: scale(1.03);
+}
+
+.project .project-list-item img {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border-radius: 15px;
+}
+.project .project-list-item .text {
+    width: 100%;
+    border-radius: 0px 0px 15px 15px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.407);
+    backdrop-filter: blur(2px);
+    text-decoration: none;
+    color: var(--dark);
+}
+
+@media only screen and (max-width: 1200px) {
+    .project .content {
+        max-width: 60vw;
+    }
+    .project .project-list {
+        grid-template-columns: 1fr;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .project {
+        padding-top: 0vh;
+    }
+    .project .content {
+        max-width: 70vw;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .project .content {
+        max-width: 85vw;
+    }
+}
+@media only screen and (max-width: 400px) {
 }

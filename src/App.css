@@ -11,6 +11,8 @@
     --background: rgb(241, 241, 241);
     --neon: #dcff6a;
     --dark: rgb(46, 46, 46);
+    --shadow: 3px 3px 7px 2px rgba(184, 184, 184, 0.538);
+
 }
  html, body {
     padding: 0;
@@ -29,7 +31,6 @@
     opacity: 1;
 }
 .dot {
-    position: absolute;
     inset: 0;
     height: 100%;
     width: 100%;

@@ -1,0 +1,18 @@
+.button {
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: var(--neon);
+    color: var(--dark);
+    cursor: pointer;
+    width: 250px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: 600;
+    transition: transform 300ms ease 100ms;
+}
+.button:hover {
+    transform: scale(1.2);
+}

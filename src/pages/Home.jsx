@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../styles/Home.css';
 import { useNavigate } from 'react-router-dom';
 import { MotionRoute, MotionChild } from '../components/Motions';
+import { Button } from '../components/Button';
 
 export const Home = () => {
     

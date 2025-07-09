@@ -71,12 +71,12 @@
     cursor: pointer;
     width: 250px;
     height: 50px;
+    transition: transform 300ms ease 100ms;
+
 }
 .home .projectBttn:hover {
-    padding: 12px;
+    transform: scale(1.2);
 }
-
-
 @media only screen and (max-width: 900px) {
     .home {
         display: flex;
