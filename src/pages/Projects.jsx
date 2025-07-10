@@ -7,6 +7,7 @@ import { ArrowSquareOutIcon, GithubLogoIcon } from '@phosphor-icons/react';
 import { TechnologyIcon } from '../components/Technology-icon';
 
 export const Projects = () => {
+    const language = 'en';
     const [ showDetail, setShowDetail ] = useState(false);
     return (
         <MotionRoute>
@@ -38,7 +39,7 @@ export const Projects = () => {
                                             <TechnologyIcon text={skill} key={index}/>
                                         ))}
                                     </div>
-                                    <p className='text'>{project.description}</p>
+                                    <p className='text'>{project.description[language]}</p>
 
                                 </div>
                             </div>
