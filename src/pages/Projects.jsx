@@ -3,7 +3,8 @@ import '../styles/Projects.css'
 import { MotionRoute, MotionChild } from '../components/Motions';
 import { PROJECTS } from '../components/Project-list'
 import { Button } from '../components/Button';
-import { ArrowSquareOutIcon, BrowsersIcon, GithubLogoIcon } from '@phosphor-icons/react';
+import { ArrowSquareOutIcon, GithubLogoIcon } from '@phosphor-icons/react';
+import { TechnologyIcon } from '../components/Technology-icon';
 
 export const Projects = () => {
     return (
@@ -18,13 +19,20 @@ export const Projects = () => {
                         {PROJECTS.map((project, index) => (
                         <div className='project-list-item' key={index}>
                             <img src={project.img} alt={project.title} />
-                            <div className='text'>
-                                <p>{project.title}</p>
-                                <p>{project.description}</p>
+                            <div className='project-description'>
                                 <div className='links'>
-                                    <a className='link' href={project.repository} target='_blank' rel='noreferrer'><GithubLogoIcon size={35} weight="fill" /></a>
-                                    <a className='link' href={project.link} target='_blank' rel='noreferrer'><ArrowSquareOutIcon size={35} /></a>
+                                    <a className='link' href={project.repository} target='_blank' rel='noreferrer'><GithubLogoIcon size={25} weight="fill" /></a>
+                                    <a className='link' href={project.link} target='_blank' rel='noreferrer'><ArrowSquareOutIcon size={25} /></a>
                                 </div>
+                                <p className='project-title'>{project.title}</p>
+                                <p className='text'>{project.description}</p>
+
+                                <div className='skills'>
+                                    {project.skills.map((skill, index) => (
+                                        <TechnologyIcon text={skill} key={index}/>
+                                    ))}
+                                </div>
+
                             </div>
                         </div>
                         ))}

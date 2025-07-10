@@ -39,6 +39,23 @@
 .project .project-list-item:hover {
     transform: scale(1.03);
 }
+.project .project-list-item .project-description {
+    width: 100%;
+    border-radius: 0px 0px 15px 15px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.636);
+    backdrop-filter: blur(4px);
+    font-weight: 600;
+    line-height: 1;
+}
+.project .project-list-item .project-description .project-title {
+    font-size: 15px;
+}
+.project .project-list-item .project-description .text {
+    font-size: 13px;
+    font-weight: 400;
+}
 
 .project .project-list-item img {
     width: 100%;
@@ -47,9 +64,8 @@
     border-radius: 15px;
 }
 .project .project-list-item .links {
-   
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
     bottom: 0;
@@ -64,15 +80,10 @@
 .project .project-list-item .link:hover {
     color: var(--neon);
 }
-.project .project-list-item .text {
-    width: 100%;
-    border-radius: 0px 0px 15px 15px;
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.407);
-    backdrop-filter: blur(4px);
-    font-weight: 600;
-    line-height: 1;
+.project .project-list-item .skills {
+    display: flex;
+    margin-left: 15px;
+    margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 1200px) {
