@@ -8,6 +8,7 @@ import { TechnologyIcon } from '../components/Technology-icon';
 
 export const ProjectsKR = () => {
     const language = 'kr';
+    
     const [ showDetail, setShowDetail ] = useState(false);
 
     return (
