@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/Projects.css'
 import { MotionRoute, MotionChild } from '../components/Motions';
 import { PROJECTS } from '../components/Project-list'
@@ -7,6 +7,7 @@ import { ArrowSquareOutIcon, GithubLogoIcon } from '@phosphor-icons/react';
 import { TechnologyIcon } from '../components/Technology-icon';
 
 export const Projects = () => {
+    const [ showDetail, setShowDetail ] = useState(false);
     return (
         <MotionRoute>
             <MotionChild>
@@ -17,22 +18,29 @@ export const Projects = () => {
                     <div className='content'>
                         <span className='project-list'>
                         {PROJECTS.map((project, index) => (
-                        <div className='project-list-item' key={index}>
+                        <div 
+                            className='project-list-item' 
+                            key={index} 
+                            onMouseEnter={() => setShowDetail(true)}
+                            onMouseLeave={() => setShowDetail(false)}
+                        >
                             <img src={project.img} alt={project.title} />
                             <div className='project-description'>
-                                <div className='links'>
-                                    <a className='link' href={project.repository} target='_blank' rel='noreferrer'><GithubLogoIcon size={25} weight="fill" /></a>
-                                    <a className='link' href={project.link} target='_blank' rel='noreferrer'><ArrowSquareOutIcon size={25} /></a>
-                                </div>
                                 <p className='project-title'>{project.title}</p>
-                                <p className='text'>{project.description}</p>
 
-                                <div className='skills'>
-                                    {project.skills.map((skill, index) => (
-                                        <TechnologyIcon text={skill} key={index}/>
-                                    ))}
+                                <div className='project-detail'>
+                                    <div className='links'>
+                                        <a className='link' href={project.repository} target='_blank' rel='noreferrer'><GithubLogoIcon size={15} weight="fill" /> GITHUB REPOSITORY</a>
+                                        <a className='link' href={project.link} target='_blank' rel='noreferrer'><ArrowSquareOutIcon size={15} /> WEBPAGE </a>
+                                    </div>
+                                    <div className='skills'>
+                                        {project.skills.map((skill, index) => (
+                                            <TechnologyIcon text={skill} key={index}/>
+                                        ))}
+                                    </div>
+                                    <p className='text'>{project.description}</p>
+
                                 </div>
-
                             </div>
                         </div>
                         ))}
