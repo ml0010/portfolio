@@ -15,4 +15,35 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    line-height: 1.8;
+}
+.about .content .introduction {
+    max-width: 40vw;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .about .content {
+    }
+    .about .content .introduction {
+        max-width: 55vw;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .about {
+        padding-top: 0vh;
+    }
+    .about .content .introduction {
+        max-width: 70vw;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .about .content {
+        max-width: 85vw;
+    }
+    .about .content .introduction {
+        max-width: 75vw;
+    }
+}
+@media only screen and (max-width: 400px) {
 }

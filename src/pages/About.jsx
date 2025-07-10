@@ -3,7 +3,6 @@ import '../styles/About.css'
 import { MotionRoute, MotionChild } from '../components/Motions';
 import { Button } from '../components/Button';
 
-
 export const About = () => {
   return (
     <MotionRoute>
@@ -13,16 +12,16 @@ export const About = () => {
                     <h1>About</h1>
                 </div>
                 <div className='content'>
-                    <span>
-                        <p>Hi! This is Mimi.</p>
-                        <p>This is English page.</p>
+                    <span className='introduction'>
+                        <p>I majored Computer Science at the university back in 2009. I recently redescovered my interest in UX/UI design. Since then I have been working on a few design projects based on the knowledge I have, also using the new skills I have gathered by completing various courses.</p>
+                        <p>I am a passionate React developer and love to discover new ideas. I have extensive knowledge about Node.js, Express.js and MongoDB and it has been applied to many of my projects.</p>
                     </span>
                     <span>
-                        <h3>Education</h3>
+                        <h3>Education / Certificates</h3>
                         <p></p>
                     </span>
                     <span>
-                        <Button text='Download CV' link='' />
+                        <Button text={`Download CV`} link='' />
                     </span>
                 </div>
             </div>
