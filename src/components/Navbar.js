@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import '../styles/Navbar.css';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { LanguageContext } from '../context/Language-context';
@@ -8,7 +8,17 @@ function Navbar() {
 
     const { isEnglish, isSpanish, isKorean, setEnglish, setSpaish, setKorean } = useContext(LanguageContext);
 
-    const path = useLocation().pathname.split('_')[0];
+    const path = useLocation().pathname.split('_')[1] || 'en';
+
+    useEffect(() => {
+        if (path === 'en') {
+            setEnglish();
+        } else if (path === 'es') {
+            setSpaish();
+        } else {
+            setKorean();
+        }
+    }, [path]);
 
     return (
         <div className='navbar'>
