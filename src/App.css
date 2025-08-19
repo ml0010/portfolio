@@ -14,11 +14,16 @@
     --shadow: 3px 3px 7px 2px rgba(184, 184, 184, 0.538);
 
 }
- html, body {
+html {
+    overflow-y: scroll;
+
+}
+html, body {
     padding: 0;
     margin: 0 auto;
 } 
 .App {
+    width: 100vw;
     font-family: 'DM Sans', 'Helvetica';
     color: var(--dark);
     background-color: var(--background);

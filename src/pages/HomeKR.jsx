@@ -25,7 +25,7 @@ export const HomeKR = () => {
                     </div>
                     <div className={`description ${loadName? 'loading' : ''}`}>
                         <p>프론트엔드 프로그래머</p>
-                        <button className='projectBttn' onClick={()=>navigate('/projects_kr')}>SEE PROJECTS</button>
+                        <button className='projectBttn' onClick={()=>navigate('/projects_kr')}>프로젝트 보기</button>
                     </div>
                 </div>
             </MotionChild>
