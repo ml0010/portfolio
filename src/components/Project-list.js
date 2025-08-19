@@ -1,5 +1,6 @@
 import img1 from '../assets/todo.png';
 import img2 from '../assets/tour.png';
+import img3 from '../assets/finance.png';
 
 export const PROJECTS = [
     {
@@ -33,6 +34,22 @@ export const PROJECTS = [
             en: 'User can create accounts and login to their account. Possibility of booking listed tours using an account detail or as a visitor using credit card. Booking management - both edit, cancel - is possible via logging or by searching a booking reference number',
             es: '',
             kr: ''
+        },
+    }, {
+        title: 'Finance Tracker',
+        img: img3,
+        description: {
+            en: `Finance Tracker `,
+            es: '',
+            kr: '수입 지출 트래킹 앱'
+        },
+        link: 'https://ml0010.github.io/expense-tracker/',
+        repository: 'https://github.com/ml0010/expense-tracker',
+        skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Node', 'Express', 'MongoDB'],
+        feature: {
+            en: 'User can add incomes and expenses. The app summarises user\'s financial status',
+            es: '',
+            kr: '유저의 수입/지출 관리와 현재 경제상태를 쉽게 점검 할수 있는 경제상황 모니터 앱'
         },
     }
 ];
