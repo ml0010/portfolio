@@ -8,17 +8,18 @@ function Navbar() {
 
     const { isEnglish, isSpanish, isKorean, setEnglish, setSpaish, setKorean } = useContext(LanguageContext);
 
-    const path = useLocation().pathname.split('_')[1] || 'en';
+    const path = useLocation().pathname.split('_')[0];
+    const language = useLocation().pathname.split('_')[1] || 'en';
 
     useEffect(() => {
-        if (path === 'en') {
+        if (language === 'en') {
             setEnglish();
-        } else if (path === 'es') {
+        } else if (language === 'es') {
             setSpaish();
         } else {
             setKorean();
         }
-    }, [path]);
+    }, [language]);
 
     return (
         <div className='navbar'>

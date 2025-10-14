@@ -8,10 +8,12 @@
 }
 .project .title {
     width: 90%;
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 20px;
 }
 .project .content {
-    max-width: 80vw;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,6 +37,10 @@
     overflow: hidden;
     transition: transform 300ms ease 100ms;
 }
+.project .project .project-list-item.active {
+    position: fixed;
+    top: 0px;
+}
 .project .project-list-item:hover {
     transform: scale(1.02);
 }
@@ -46,7 +52,7 @@
     background-color: rgba(255, 255, 255, 0.636);
     backdrop-filter: blur(4px);
     line-height: 1;
-    height: 8vh;
+    height: 15%;
     transition: height 0.5s ease-in-out;
 }
 .project .project-list-item:hover .project-description {
@@ -70,10 +76,15 @@
 .project .project-list-item .project-description .project-title {
     font-size: 20px;
     font-weight: 800;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    transition: height 0.5s ease-in-out;
+
+}
+.project .project-list-item:hover .project-description .project-title {
+    height: 20%;
 }
 .project .project-list-item .skills {
     display: flex;

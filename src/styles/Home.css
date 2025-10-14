@@ -11,12 +11,12 @@
     letter-spacing: 0.2rem;
     font-weight: 800;
     font-family: 'Classma';
-
+    padding-top: 20vh;
 }
 .home .name.loading {
     transition: 1s;
     transition-delay: 0.3s;
-    left: 15vw;
+    left: 15%;
 }
 
 .home .name .highlighter {
@@ -54,7 +54,7 @@
     position: absolute;
     font-size: 25px;
     left: 0;
-    top: 35%;
+    top: 45%;
     opacity: 0;
 }
 .home .description.loading {
@@ -62,20 +62,14 @@
     transition-delay: 1s;
     left: 15vw;
     opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.home .projectBttn {
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: var(--neon);
-    cursor: pointer;
-    width: 250px;
-    height: 50px;
-    transition: transform 300ms ease 100ms;
-
-}
-.home .projectBttn:hover {
-    transform: scale(1.2);
+.home .description .text {
+    font-size: 20px;
+    padding: 15px;
 }
 @media only screen and (max-width: 900px) {
     .home {

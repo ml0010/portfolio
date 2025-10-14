@@ -18,7 +18,7 @@ function App() {
     return (
         <div className={`App dot`}>
             <div className={`contents ${loadingEffect ? 'active' : ''}`}>
-            <BrowserRouter basename="/portfolio" >
+            <BrowserRouter basename="/portfolio">
             <AnimatePresence>
                 <LanguageContextProvider>
                     <Navbar />

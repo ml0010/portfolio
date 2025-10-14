@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css';
 import { MotionRoute, MotionChild } from '../components/Motions';
@@ -24,8 +24,8 @@ export const HomeES = () => {
                         </p>
                     </div>
                     <div className={`description ${loadName? 'loading' : ''}`}>
-                        <p>Desarrollador Front End</p>
-                        <button className='projectBttn' onClick={()=>navigate('/projects_es')}>VER PROYECTOS</button>
+                        <p className='text'>Desarrollador Front End</p>
+                        <button className='button' onClick={()=>navigate('/projects_es')}>VER PROYECTOS</button>
                     </div>
                 </div>
             </MotionChild>

@@ -6,6 +6,9 @@
       font-weight: normal; /* Specify font weight */
       font-style: normal;  /* Specify font style */
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
     --background: rgb(241, 241, 241);

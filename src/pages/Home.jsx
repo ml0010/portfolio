@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import '../styles/Home.css';
 import { useNavigate } from 'react-router-dom';
 import { MotionRoute, MotionChild } from '../components/Motions';
-import { Button } from '../components/Button';
 
 export const Home = () => {
     
@@ -24,8 +23,8 @@ export const Home = () => {
                         </p>
                     </div>
                     <div className={`description ${loadName? 'loading' : ''}`}>
-                        <p>Front End Developer</p>
-                        <button className='projectBttn' onClick={()=>navigate('/projects')}>SEE PROJECTS</button>
+                        <p className='text'>Front End Developer</p>
+                        <button className='button' onClick={()=>navigate('/projects')}>SEE PROJECTS</button>
                     </div>
                 </div>
             </MotionChild>

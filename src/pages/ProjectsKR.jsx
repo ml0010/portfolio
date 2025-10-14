@@ -13,7 +13,7 @@ export const ProjectsKR = () => {
                 <MotionChild>
                     <div className='project'>
                         <div className='title'>
-                            <h1>Projects</h1>
+                            <h1>프로젝트</h1>
                         </div>
                         <div className='content'>
                             <ProjectOutput language={language}/>

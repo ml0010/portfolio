@@ -13,7 +13,7 @@ export const ProjectsES = () => {
                 <MotionChild>
                     <div className='project'>
                         <div className='title'>
-                            <h1>Projects</h1>
+                            <h1>Proyectos</h1>
                         </div>
                         <div className='content'>
                             <ProjectOutput language={language}/>
